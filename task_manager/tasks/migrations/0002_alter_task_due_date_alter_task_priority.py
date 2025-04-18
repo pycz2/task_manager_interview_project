@@ -4,20 +4,21 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('tasks', '0001_initial'),
+        ("tasks", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='task',
-            name='due_date',
+            model_name="task",
+            name="due_date",
             field=models.DateField(db_index=True, null=True),
         ),
         migrations.AlterField(
-            model_name='task',
-            name='priority',
-            field=models.IntegerField(choices=[(1, 'High'), (2, 'Medium'), (3, 'Low')], db_index=True),
+            model_name="task",
+            name="priority",
+            field=models.IntegerField(
+                choices=[(1, "High"), (2, "Medium"), (3, "Low")], db_index=True
+            ),
         ),
     ]
